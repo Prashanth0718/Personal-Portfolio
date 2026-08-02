@@ -10,7 +10,7 @@ import PageHero from '@/components/ui/PageHero';
 import GlassCard from '@/components/ui/GlassCard';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
-const filters = ['All', 'Full-Stack', 'Data Engineering', 'AI/ML', 'Backend'];
+const filters = ['All', 'Full-Stack', 'Data Engineering', 'Frontend','Algorithms','API Integration'];
 
 const statusStyles = {
   Production: { bg: 'bg-emerald-500/15', text: 'text-emerald-400', dot: 'bg-emerald-400' },
