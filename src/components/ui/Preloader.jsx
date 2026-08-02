@@ -38,7 +38,9 @@ export default function Preloader() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
       >
-        PRASHANTH S N
+        {/* PRASHANTH S N */}
+
+      CRAFTING DIGITAL EXPERIENCES...
       </motion.p>
       <motion.div
         className="mt-4 h-px w-40 overflow-hidden bg-white/10"
