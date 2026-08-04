@@ -28,12 +28,23 @@ export function useEmailJS() {
   const send = async (formData) => {
     setStatus('loading');
     setError(null);
+
     try {
       await sendContactEmail(formData);
+
       setStatus('success');
+
+      // Return button to normal after 3 seconds
+      setTimeout(() => {
+        setStatus('idle');
+      }, 3000);
+
+      return true;
     } catch (err) {
       setError(err?.text || 'Failed to send message');
       setStatus('error');
+
+      return false;
     }
   };
 

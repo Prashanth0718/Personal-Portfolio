@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi';
 import { personal } from '@/constants/data';
+import BrandMark from '@/components/ui/BrandMark';
 
 const socials = [
   { name: 'GitHub', href: personal.github, icon: FiGithub, hover: 'hover:border-violet-400/60 hover:text-violet-300 hover:shadow-[0_0_20px_-4px_rgba(124,58,237,0.5)]' },
@@ -30,17 +31,13 @@ export default function Footer() {
         <div className="grid items-center gap-8 md:grid-cols-3">
           {/* Left: Logo + Name + Role */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
-            <Link to="/" className="flex items-center gap-2.5">
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-electric-500 font-display text-lg font-bold text-white shadow-glow"
-              >
-                P
-              </motion.span>
-              <div>
-                <span className="block font-display text-lg font-semibold leading-tight">{personal.name}</span>
-                <span className="block text-xs text-muted">{personal.role}</span>
-              </div>
+            <Link to="/" className="inline-flex items-center">
+              <BrandMark
+                size={40}
+                withName
+                showSubtitle
+                nameSize="md"
+              />
             </Link>
           </div>
 

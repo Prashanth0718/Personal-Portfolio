@@ -1,9 +1,9 @@
 import {
   SiPython, SiJavascript, SiHtml5, SiReact,
   SiFastapi, SiSqlite, SiGit, SiGithub, SiMysql, SiDatabricks,
-  SiTailwindcss, SiMongodb, SiThreedotjs, SiDocker, SiVercel,
+  SiTailwindcss, SiMongodb, SiThreedotjs, SiDocker, SiVercel, SiNodedotjs, SiExpress, SiNetlify, SiFramer, SiVite, SiPostman,
 } from 'react-icons/si';
-import { DiJava, DiCss3 } from 'react-icons/di';
+import { DiJava, DiCss3, DiAws, DiVisualstudio } from 'react-icons/di';
 import { TbSql } from 'react-icons/tb';
 import { HiOutlineCommandLine } from 'react-icons/hi2';
 
@@ -11,20 +11,17 @@ export const personal = {
   name: 'Prashanth S N',
   firstName: 'Prashanth',
   lastName: 'S N',
-
   role: 'Associate Software Engineer',
   company: 'CGI',
   unit: 'Insurance & Health Business Unit',
-
   location: 'Hyderabad, India',
-
   email: 'prashanthsn2003@gmail.com',
-
+  phone: '+91 6363690394',
   github: 'https://github.com/Prashanth0718',
   githubUser: 'Prashanth0718',
-
   linkedin: 'https://www.linkedin.com/in/prashanth-s-n-agrahara/',
-
+  twitter: 'https://twitter.com/prashanth_s_n',
+  instagram: 'https://www.instagram.com/_.prashanth_kshatriyas._',
   bio:
     'I build modern full-stack applications, scalable backend systems, and data-driven software solutions that solve real-world problems.',
 
@@ -36,11 +33,10 @@ export const personal = {
 };
 
 export const roles = [
-  'Associate Software Engineer',
+  'Software Developer',
   'Full-Stack Developer',
   'Backend Developer',
   'Data Engineer',
-  'AWS Cloud Learner',
 ];
 
 export const socials = [
@@ -50,10 +46,10 @@ export const socials = [
 ];
 
 export const stats = [
-  { label: 'Projects', value: 10, suffix: '+' },
+  { label: 'Projects', value: 8, suffix: '+' },
   { label: 'Technologies', value: 12, suffix: '+' },
-  { label: 'GitHub Repositories', value: 20, suffix: '+' },
-  { label: 'Certifications', value: 3, suffix: '+' },
+  { label: 'GitHub Repositories', value: 18, suffix: '+' },
+  { label: 'Certifications', value: 4, suffix: '+' },
 ];
 
 export const about = {
@@ -95,6 +91,11 @@ export const about = {
     year: '2019',
     desc: 'Completed with 87.52%.',
   },
+  ],
+  languages: [
+    { name: 'English', level: 'Professional' },
+    { name: 'Kannada', level: 'Native' },
+    { name: 'Telugu', level: 'Conversational' },
   ],
   timeline: [
   {
@@ -140,10 +141,10 @@ export const skillCategories = [
     category: 'Programming Languages',
     skills: [
       { name: 'Python', level: 90, icon: SiPython, color: '#3776AB' },
-      { name: 'Java', level: 75, icon: DiJava, color: '#ED8B00' },
+      { name: 'Java', level: 85, icon: DiJava, color: '#ED8B00' },
       { name: 'JavaScript', level: 80, icon: SiJavascript, color: '#F7DF1E' },
       { name: 'SQL', level: 88, icon: TbSql, color: '#00758F' },
-      { name: 'HTML', level: 88, icon: SiHtml5, color: '#E34F26' },
+      { name: 'HTML', level: 90, icon: SiHtml5, color: '#E34F26' },
       { name: 'CSS', level: 85, icon: DiCss3, color: '#1572B6' },
     ],
   },
@@ -153,21 +154,25 @@ export const skillCategories = [
       { name: 'React', level: 82, icon: SiReact, color: '#61DAFB' },
       { name: 'Tailwind CSS', level: 85, icon: SiTailwindcss, color: '#06B6D4' },
       { name: 'Three.js', level: 65, icon: SiThreedotjs, color: '#ffffff' },
+      { name: 'Framer Motion', level: 80, icon: SiFramer, color: '#0055FF' },
+      { name: 'Vite', level: 82, icon: SiVite, color: '#646CFF' },
     ],
   },
   {
     category: 'Backend',
     skills: [
       { name: 'FastAPI', level: 78, icon: SiFastapi, color: '#009688' },
+      { name: 'Node.js', level: 75, icon: SiNodedotjs, color: '#339933' },
+      { name: 'Express.js', level: 75, icon: SiExpress, color: '#339933' },
       { name: 'REST APIs', level: 80, icon: HiOutlineCommandLine, color: '#a78bfa' },
     ],
   },
   {
     category: 'Databases',
     skills: [
-      { name: 'SQLite', level: 82, icon: SiSqlite, color: '#003B57' },
       { name: 'MySQL', level: 80, icon: SiMysql, color: '#4479A1' },
       { name: 'MongoDB', level: 70, icon: SiMongodb, color: '#47A248' },
+      { name: 'SQLite', level: 82, icon: SiSqlite, color: '#003B57' },
     ],
   },
   {
@@ -176,7 +181,7 @@ export const skillCategories = [
       { name: 'ETL', level: 85, icon: HiOutlineCommandLine, color: '#a78bfa' },
       { name: 'Databricks', level: 75, icon: SiDatabricks, color: '#FF3621' },
       { name: 'SCD Type 2', level: 80, icon: HiOutlineCommandLine, color: '#60a5fa' },
-      { name: 'Data Validation', level: 82, icon: HiOutlineCommandLine, color: '#22d3ee' },
+      { name: 'Data Warehousing', level: 78, icon: HiOutlineCommandLine, color: '#150458' },
     ],
   },
   {
@@ -186,26 +191,29 @@ export const skillCategories = [
       { name: 'GitHub', level: 88, icon: SiGithub, color: '#ffffff' },
       { name: 'Docker', level: 60, icon: SiDocker, color: '#2496ED' },
       { name: 'Vercel', level: 75, icon: SiVercel, color: '#ffffff' },
+      { name: 'AWS', level: 40, icon: DiAws, color: '#FF9900' },
+      { name: 'Netlify', level: 88, icon: SiNetlify, color: '#ffffff' },
+
     ],
   },
 ];
 
 export const skills = [
   { name: 'Python', level: 90, icon: SiPython, color: '#3776AB' },
-  { name: 'Java', level: 75, icon: DiJava, color: '#ED8B00' },
-  { name: 'SQL', level: 88, icon: TbSql, color: '#00758F' },
+  { name: 'Java', level: 85, icon: DiJava, color: '#ED8B00' },
   { name: 'JavaScript', level: 80, icon: SiJavascript, color: '#F7DF1E' },
   { name: 'React', level: 82, icon: SiReact, color: '#61DAFB' },
   { name: 'FastAPI', level: 78, icon: SiFastapi, color: '#009688' },
+  { name: 'Node.js', level: 75, icon: SiNodedotjs, color: '#339933' },
+  { name: 'SQL', level: 88, icon: TbSql, color: '#00758F' },
+  { name: 'MongoDB', level: 70, icon: SiMongodb, color: '#47A248' },
   { name: 'ETL', level: 85, icon: HiOutlineCommandLine, color: '#a78bfa' },
-  { name: 'SQLite', level: 82, icon: SiSqlite, color: '#003B57' },
-  { name: 'MySQL', level: 80, icon: SiMysql, color: '#4479A1' },
   { name: 'Databricks', level: 75, icon: SiDatabricks, color: '#FF3621' },
   { name: 'Git', level: 85, icon: SiGit, color: '#F05032' },
   { name: 'GitHub', level: 88, icon: SiGithub, color: '#ffffff' },
   { name: 'Tailwind CSS', level: 85, icon: SiTailwindcss, color: '#06B6D4' },
-  { name: 'HTML', level: 88, icon: SiHtml5, color: '#E34F26' },
-  { name: 'CSS', level: 85, icon: DiCss3, color: '#1572B6' },
+  { name: 'MySQL', level: 80, icon: SiMysql, color: '#4479A1' },
+  { name: 'AWS', level: 40, icon: DiAws, color: '#FF9900' },
 ];
 
 export const techStackCategories = [
@@ -220,6 +228,8 @@ export const techStackCategories = [
       { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
       { name: 'HTML5', icon: SiHtml5, color: '#E34F26' },
       { name: 'CSS3', icon: DiCss3, color: '#1572B6' },
+      { name: 'Vite', icon: SiVite, color: '#646CFF' },
+      { name: 'Framer Motion', icon: SiFramer, color: '#0055FF' },
     ],
   },
   {
@@ -228,9 +238,9 @@ export const techStackCategories = [
     accent: '#009688',
     items: [
       { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
+      { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+      { name: 'Express.js', icon: SiExpress, color: '#ffffff' },
       { name: 'REST APIs', icon: HiOutlineCommandLine, color: '#a78bfa' },
-      { name: 'Java', icon: DiJava, color: '#ED8B00' },
-      { name: 'Python', icon: SiPython, color: '#3776AB' },
     ],
   },
   {
@@ -252,7 +262,7 @@ export const techStackCategories = [
       { name: 'ETL', icon: HiOutlineCommandLine, color: '#a78bfa' },
       { name: 'Databricks', icon: SiDatabricks, color: '#FF3621' },
       { name: 'SCD Type 2', icon: HiOutlineCommandLine, color: '#60a5fa' },
-      { name: 'Data Validation', icon: HiOutlineCommandLine, color: '#22d3ee' },
+      { name: 'Data Warehousing', icon: HiOutlineCommandLine, color: '#22d3ee' },
       { name: 'Pandas', icon: HiOutlineCommandLine, color: '#150458' },
     ],
   },
@@ -261,8 +271,10 @@ export const techStackCategories = [
     icon: 'cloud',
     accent: '#2496ED',
     items: [
+      { name: 'AWS', icon: DiAws, color: '#FF9900' },
       { name: 'Docker', icon: SiDocker, color: '#2496ED' },
       { name: 'Vercel', icon: SiVercel, color: '#ffffff' },
+      { name: 'Netlify', icon: SiNetlify, color: '#ffffff' },
     ],
   },
   {
@@ -272,6 +284,9 @@ export const techStackCategories = [
     items: [
       { name: 'Git', icon: SiGit, color: '#F05032' },
       { name: 'GitHub', icon: SiGithub, color: '#ffffff' },
+      { name: 'Postman', icon: SiPostman, color: '#007ACC' },
+      { name: 'VS Code', icon: DiVisualstudio, color: '#007ACC' },
+
     ],
   },
 ];
@@ -280,15 +295,15 @@ export const techStack = [
   { name: 'Python', icon: SiPython, color: '#3776AB' },
   { name: 'Java', icon: DiJava, color: '#ED8B00' },
   { name: 'React', icon: SiReact, color: '#61DAFB' },
+  { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+  { name: 'Express.js', icon: SiExpress, color: '#ffffff' },
   { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
-  { name: 'SQLite', icon: SiSqlite, color: '#003B57' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+  { name: 'Databricks', icon: SiDatabricks, color: '#FF3621' },
   { name: 'Git', icon: SiGit, color: '#F05032' },
   { name: 'GitHub', icon: SiGithub, color: '#ffffff' },
-  { name: 'Tailwind', icon: SiTailwindcss, color: '#06B6D4' },
-  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
-  { name: 'ThreeJS', icon: SiThreedotjs, color: '#ffffff' },
-  { name: 'Databricks', icon: SiDatabricks, color: '#FF3621' },
-  { name: 'SQL', icon: TbSql, color: '#00758F' },
+  { name: 'AWS', icon: DiAws, color: '#FF9900' },
 ];
 
 export const experiences = [
@@ -1196,36 +1211,49 @@ export const certifications = [
   {
     title: 'Databricks Certified Data Engineer Associate',
     issuer: 'Databricks',
-    year: '2024',
+    year: '2026',
     color: '#FF3621',
-    credentialId: 'DB-DE-2024-0718',
-    verify: 'https://www.databricks.com/learn/certifications/data-engineer-associate',
-    description: 'Validated expertise in data engineering on the Databricks Lakehouse Platform — including data ingestion, transformation, orchestration, and pipeline monitoring.',
+    credentialId: '182983658',
+    verify: 'https://drive.google.com/file/d/1bwYTWRe0eaXE60n2yQazJZvsXEM57f2-/view',
+    description:
+      'Validated expertise in data engineering on the Databricks Lakehouse Platform, including data ingestion, transformation, orchestration, and pipeline optimization.',
   },
   {
-    title: 'Java Certification',
-    issuer: 'Oracle',
-    year: '2023',
+    title: 'Programming with Java 8',
+    issuer: 'Presidency University',
+    year: '2022',
     color: '#ED8B00',
-    credentialId: 'ORA-JAVA-2023-0718',
-    verify: 'https://education.oracle.com/java-essentials/product',
-    description: 'Demonstrated proficiency in Java programming fundamentals, object-oriented design, and core Java APIs.',
+    credentialId: 'VAC/2021-2022/Even Semester/704',
+    verify: 'https://drive.google.com/file/d/1tC_pUOmzGD10pl2RkuBHzUAyrTQegipz/view',
+    description:
+      'Completed advanced Java 8 training covering object-oriented programming, collections, exception handling, multithreading, and modern Java 8 features.',
   },
   {
-    title: 'Machine Learning Certification',
-    issuer: 'Coursera',
+    title: 'Introduction to Python',
+    issuer: 'AI Business School',
+    year: '2022',
+    color: '#3776AB',
+    credentialId: null,
+    verify: 'https://drive.google.com/file/d/1asMcNBr4eE6Z-_b1k5dyMLSLf9xqoet9/view',
+    description:
+      'Learned Python programming fundamentals including data types, functions, object-oriented programming, file handling, and problem solving.',
+  },
+  {
+    title: 'Getting Started with Machine Learning Algorithms',
+    issuer: 'Simplilearn',
     year: '2023',
-    color: '#a78bfa',
-    credentialId: 'COUR-ML-2023-0718',
-    verify: 'https://www.coursera.org/browse/data-science/machine-learning',
-    description: 'Completed comprehensive coursework in machine learning — covering supervised learning, neural networks, and practical model deployment.',
+    color: '#8B5CF6',
+    credentialId: '4657917',
+    verify: 'https://drive.google.com/file/d/1tCwfmib1zO0NBNm2P21rfp_nFevCH1y4/view',
+    description:
+      'Explored the fundamentals of machine learning, supervised learning algorithms, model evaluation, and practical applications using Python.',
   },
 ];
 
 export const achievementsData = [
-  { label: 'Projects', value: 15, suffix: '+' },
-  { label: 'Certifications', value: 3, suffix: '' },
-  { label: 'GitHub Repos', value: 20, suffix: '+' },
+  { label: 'Projects', value: 8, suffix: '+' },
+  { label: 'Certifications', value: 4, suffix: '' },
+  { label: 'GitHub Repos', value: 18, suffix: '+' },
   { label: 'Coding Hours', value: 1200, suffix: '+' },
 ];
 

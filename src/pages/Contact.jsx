@@ -27,13 +27,30 @@ export default function Contact() {
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const handleBlur = (e) => setTouched({ ...touched, [e.target.name]: true });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (Object.keys(errors).length > 0) {
-      setTouched({ name: true, email: true, message: true });
+      setTouched({
+        name: true,
+        email: true,
+        message: true,
+      });
       return;
     }
-    send(form);
+
+    const success = await send(form);
+
+    if (success) {
+      setForm({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      setTouched({});
+      setErrors({});
+    }
   };
 
   return (

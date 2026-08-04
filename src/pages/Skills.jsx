@@ -44,16 +44,16 @@ function SkillBar({ skill, index }) {
 export default function Skills() {
   const [activeCert, setActiveCert] = useState(null);
 
-  const handleDownload = (cert) => {
-    const text = `${cert.title}\n${cert.issuer} — ${cert.year}\nCredential ID: ${cert.credentialId}\nVerify: ${cert.verify}`;
-    const blob = new Blob([text], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${cert.title.replace(/\s+/g, '_')}_certificate.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+  // const handleDownload = (cert) => {
+  //   const text = `${cert.title}\n${cert.issuer} — ${cert.year}\nCredential ID: ${cert.credentialId}\nVerify: ${cert.verify}`;
+  //   const blob = new Blob([text], { type: 'text/plain' });
+  //   const url = URL.createObjectURL(blob);
+  //   const a = document.createElement('a');
+  //   a.href = url;
+  //   a.download = `${cert.title.replace(/\s+/g, '_')}_certificate.txt`;
+  //   a.click();
+  //   URL.revokeObjectURL(url);
+  // };
 
   return (
     <>
@@ -190,29 +190,48 @@ export default function Skills() {
                 <h3 className="mt-6 font-display text-2xl font-bold">{activeCert.title}</h3>
                 <p className="mt-2 text-muted">{activeCert.issuer} &middot; {activeCert.year}</p>
                 <p className="mt-4 max-w-md text-sm text-muted">{activeCert.description}</p>
-                <div className="mt-8 w-full rounded-xl border border-white/10 bg-gradient-to-br from-ink-700 to-ink-800 p-8">
-                  <p className="font-mono text-sm text-muted">This certifies that</p>
-                  <p className="mt-2 font-display text-xl font-bold gradient-text">Prashanth S N</p>
-                  <p className="mt-2 text-sm text-muted">has successfully completed all requirements</p>
-                  <div className="mt-6 flex items-center justify-between text-xs text-muted">
-                    <span>ID: {activeCert.credentialId}</span>
-                    <span>{activeCert.issuer}</span>
+                <div className="mt-8 w-full rounded-xl border border-white/10 bg-gradient-to-br from-ink-700 to-ink-800 p-8 text-center">
+                  <p className="font-mono text-xs uppercase tracking-[0.25em] text-violet-300">
+                    Certificate of Completion
+                  </p>
+
+                  <p className="mt-6 text-sm text-muted">
+                    This certifies that
+                  </p>
+
+                  <p className="mt-3 font-display text-2xl font-bold gradient-text">
+                    Prashanth S N
+                  </p>
+
+                  <p className="mt-4 text-sm text-muted">
+                    has successfully completed all certification requirements.
+                  </p>
+
+                  <p className="mt-6 text-sm text-muted">
+                    Issued by <span className="font-medium text-white">{activeCert.issuer}</span>
+                  </p>
+
+                  <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-muted">
+                    {activeCert.credentialId && (
+                      <span>Certificate ID: {activeCert.credentialId}</span>
+                    )}
+                    <span>{activeCert.year}</span>
                   </div>
                 </div>
                 <div className="mt-6 flex gap-3">
-                  <button
+                  {/* <button
                     onClick={() => handleDownload(activeCert)}
                     className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm text-white transition-colors hover:border-violet-400/50"
                   >
                     <FiDownload size={14} /> Download
-                  </button>
+                  </button> */}
                   <a
                     href={activeCert.verify}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 to-electric-500 px-5 py-2.5 text-sm text-white shadow-glow"
                   >
-                    Verify <FiExternalLink size={14} />
+                    View Certificate <FiExternalLink size={14} />
                   </a>
                 </div>
               </div>

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi';
-import { navLinks, personal } from '@/constants/data';
+import { navLinks } from '@/constants/data';
+import BrandMark from '@/components/ui/BrandMark';
 
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
@@ -19,17 +20,6 @@ export default function Navbar({ theme, toggleTheme }) {
     setOpen(false);
   }, [location.pathname]);
 
-  const handleLinkClick = (e, path) => {
-    if (location.pathname === path) {
-      e.preventDefault();
-      if (window.lenis) {
-        window.lenis.scrollTo(0, { immediate: false });
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -40,13 +30,8 @@ export default function Navbar({ theme, toggleTheme }) {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link to="/" onClick={(e) => handleLinkClick(e, '/')} className="group flex items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-electric-500 font-display text-lg font-bold text-white shadow-glow">
-            P
-          </span>
-          <span className="font-display text-sm font-semibold tracking-wide">
-            {personal.name.split(' ')[0]}<span className="text-violet-400">.</span>
-          </span>
+        <Link to="/" className="group">
+          <BrandMark size={32} />
         </Link>
 
         <div className="hidden items-center gap-0.5 lg:flex">
@@ -56,7 +41,6 @@ export default function Navbar({ theme, toggleTheme }) {
               <Link
                 key={link.name}
                 to={link.path}
-                onClick={(e) => handleLinkClick(e, link.path)}
                 className={`relative rounded-full px-3 py-2 text-sm transition-colors ${
                   isActive ? 'text-white' : 'text-muted hover:text-white'
                 }`}
@@ -104,10 +88,7 @@ export default function Navbar({ theme, toggleTheme }) {
                 <Link
                   key={link.name}
                   to={link.path}
-                  onClick={(e) => {
-                    setOpen(false);
-                    handleLinkClick(e, link.path);
-                  }}
+                  onClick={() => setOpen(false)}
                   className={`rounded-lg px-4 py-3 transition-colors hover:bg-white/5 ${
                     location.pathname === link.path ? 'text-white' : 'text-muted hover:text-white'
                   }`}
